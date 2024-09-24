@@ -1,13 +1,10 @@
 
-import './Introduction.component.css';
-import Image from 'next/image';
-import bg from '../public/bg.png'
+import './Introduction.css';
 
 const Introduction = () => {
     return (
         <>
         <div className='dev-btn'>In Development : Thanks For ur Visit</div>
-        <Image src={bg} alt="" className='img'/>
         <div className='intro-div'>
             <div className='designation'>Developer</div>
             <div className='name1'>Vipin</div>

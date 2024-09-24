@@ -1,0 +1,59 @@
+
+.project-section{
+    position: relative;
+    margin-top: 6vh;
+    left: 37%;
+    /* background-color: red; */
+    width: 60%;
+}
+
+.project-heading{
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    font-weight: 600;
+}
+
+.project-card{
+    border: 1px solid white;
+    margin-top: 3vh;
+    margin-right: 3vh;
+    padding: 30px;
+    height: 600px;
+    width: 460px;
+    position: relative;
+
+}
+
+.project-card img{
+    width: 400px;
+    height: 300px;
+}
+
+.project-cards{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.project-name{
+    font-size: 1.5rem;
+    /* text-transform: uppercase; */
+    /* letter-spacing: 0.2rem; */
+    font-weight: 600;
+    margin-top: 1vh;
+}
+
+.project-description{
+    font-size: 1rem;
+    font-weight: 400;
+    margin-top: 1vh;
+}
+
+
+.project-btn{
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+}
