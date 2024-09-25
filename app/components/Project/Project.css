@@ -3,8 +3,8 @@
     position: relative;
     margin-top: 6vh;
     left: 37%;
+    width: 63%;
     /* background-color: red; */
-    width: 60%;
 }
 
 .project-heading{
@@ -13,27 +13,29 @@
     letter-spacing: 0.2rem;
     font-weight: 600;
 }
+.project-cards{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 2vh;
+}
 
-.project-card{
+.project-card {
     border: 1px solid white;
     margin-top: 3vh;
     margin-right: 3vh;
     padding: 30px;
     height: 600px;
     width: 460px;
-    position: relative;
-
+    position: relative; 
+    transition: filter 0.3s ease;
 }
+
 
 .project-card img{
     width: 400px;
     height: 300px;
 }
 
-.project-cards{
-    display: flex;
-    flex-wrap: wrap;
-}
 
 .project-name{
     font-size: 1.5rem;
@@ -56,4 +58,10 @@
     bottom: 30px;
     font-size: 1.2rem;
     padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+
+.project-card.blurred {
+    filter: blur(4px); 
 }

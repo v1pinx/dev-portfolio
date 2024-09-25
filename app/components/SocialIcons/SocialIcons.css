@@ -1,0 +1,46 @@
+
+.social-icons{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    margin-top: 12vh;
+}
+svg{
+    margin-bottom: -1vh;
+    display: flex;
+    flex-direction: column;
+}
+.social-icons a{
+    margin: 1.8rem 0 1.8rem 1rem;
+    text-decoration: none;
+}
+.social-icons a i{
+    padding: 10px;
+    color: #fff;
+    font-size: 1.6rem;
+    text-decoration: none;
+    border: 1px solid #fff;
+    border-radius: 50%;
+}
+
+.social-icons a i:hover{
+    background-color: #fff;
+    color: #000;
+    transition: all 0.3s;
+}
+
+.social-icons a svg{
+    padding: 10px;
+    fill: #fff;
+    font-size: 1rem;
+    text-decoration: none;
+    border: 1px solid #fff;
+    border-radius: 50%;
+}
+
+
+.social-icons a svg:hover{
+    background-color: #fff;
+    fill: #000;
+    transition: all 0.3s;
+}
