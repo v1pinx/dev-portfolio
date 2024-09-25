@@ -48,7 +48,7 @@ const Project = () => {
                     trigger: card,
                     start: "top 80%", 
                     toggleActions: "play none none reverse none", 
-                    markers: true 
+            
                 }
             });
         });
