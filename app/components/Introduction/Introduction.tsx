@@ -50,9 +50,9 @@ const Introduction = () => {
         <>
             <div className='dev-btn'>In Development : Thanks For Visiting</div>
             <div className='intro-div'>
-                <div className='designation'>Developer</div>
-                <div className='name1'>Vipin</div>
-                <div className='name2'>Kumar</div>
+                <div className='designation cursor-scale s'>Developer</div>
+                <div className='name1 cursor-scale'>Vipin</div>
+                <div className='name2 cursor-scale'>Kumar</div>
                 <div className='description'>I'm a student skilled in web development, proficient in C++, Java, Next.js, and the MERN stack. I'm a tech geek who enjoys helping others, learning new technologies, and treating people with respect :)</div>
             </div>
         </>

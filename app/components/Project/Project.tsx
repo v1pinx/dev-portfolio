@@ -93,7 +93,7 @@ const Project = () => {
     return (
         <>
             <div className='project-section'>
-                <div className='project-heading'>Projects</div>
+                <div className='project-heading cursor-scale s'>Projects</div>
                 <div className='project-cards'>
                     <ProjectCard
                         image='https://placewaifu.com/image/400'
