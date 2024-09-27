@@ -1,4 +1,5 @@
 import CustomCursor from "./components/CustomCursor/CustomCursor";
+import Footer from "./components/Footer/Footer";
 import Introduction from "./components/Introduction/Introduction";
 import Project from "./components/Project/Project";
 import Skills from "./components/Skills/Skills";
@@ -13,6 +14,7 @@ export default function Home() {
       <Introduction />
       <Project />
       <Skills />
+      {/* <Footer /> */}
     </>
   );
 }
