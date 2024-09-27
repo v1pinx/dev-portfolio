@@ -92,32 +92,32 @@ const Project = () => {
     },[])
     return (
         <>
-            <div className='project-section'>
+            <div className='project-section' id='projects'>
                 <div className='project-heading cursor-scale s'>Projects</div>
                 <div className='project-cards'>
                     <ProjectCard
-                        image='https://placewaifu.com/image/400'
+                        image='https://placewaifu.com/image/1280/720'
                         name='Hash Wallet'
                         description='Hash Wallet is a decentralized crypto wallet built with Next.js, TypeScript, and Web3, supporting Ethereum and Solana blockchains. It features a responsive UI, secure asset management, and robust protection for private keys and transactions.'
                         link='https://github.com/v1pinx/hashwallet-crypto-wallet'
                     />
 
                     <ProjectCard
-                        image='https://placewaifu.com/image/400'
+                        image='https://placewaifu.com/image/600'
                         name='URL Shortener'
                         description='URL Shortener is a Node.js-based platform that allows users to create and manage shortened URLs. Built with Express.js and MongoDB, it features user authentication for secure link management, optimized RESTful APIs for fast operations, and a scalable, reliable data storage system.'
                         link='https://github.com/v1pinx/INT222-backend-project'
                     />
 
                     <ProjectCard
-                        image='https://placewaifu.com/image/400'
+                        image='https://placewaifu.com/image/500'
                         name='Bingo Game'
                         description='Bingo Grid Game is a real-time, interactive Bingo game built with React and Node.js, featuring seamless multiplayer functionality. It uses Socket.IO for low-latency communication between players and offers a user-friendly interface for smooth and engaging gameplay.'
                         link='https://github.com/v1pinx/bingo-game'
                     />
 
                     <ProjectCard
-                        image='https://placewaifu.com/image/400'
+                        image='https://placewaifu.com/image/450'
                         name='Resume Builder'
                         description='Resume Builder is a Node.js web app that lets users create professional resumes using dynamic forms. It features a responsive design, real-time preview, and seamless PDF downloads, all built with a modular and maintainable code structure.'
                         link='https://github.com/v1pinx/INT219-frontend-project'

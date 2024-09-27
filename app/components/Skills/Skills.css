@@ -1,21 +1,21 @@
 .skill-section{
     position: relative;
-    margin-top: 8vh;
-    left: 37%;
-    width: 63%;
+    margin: 12vh 15rem 0 15rem;
+    /* left: 37%;
+    width: 63%; */
     /* background-color: red; */
 }
 
 .skill-heading{
-    font-size: 2rem;
+    font-size: 3rem;
     text-transform: uppercase;
     letter-spacing: 0.2rem;
     font-weight: 600;
 }
 
 .skill-icons{
-    margin-top: 3vh;
-    width: 80%;
+    margin-top: 5vh;
+    /* width: 80%; */
     display: flex;
     gap: 3rem;;
     flex-wrap: wrap;

@@ -27,7 +27,6 @@ const Skills = () => {
                 trigger: '.skill-icons img',
                 start: "top 80%", 
                 toggleActions: "play none none reverse none", 
-                markers: true 
             },
             opacity: 0,
             duration: 0.5,
@@ -36,12 +35,39 @@ const Skills = () => {
             stagger: 0.1,
 
         });
+
+        let icons = document.querySelectorAll('.skill-icons img');
+        icons.forEach((icon) =>{
+            icon.addEventListener('mouseenter', () => {
+                icons.forEach((otherIcon) => {
+                    if (otherIcon !== icon) {
+                        gsap.to(otherIcon, {
+                            scale: 0.8,
+                            duration: 0.5,
+                            ease: "back.out(1.7)"
+                        });
+                    }
+                });
+            });
+
+            icon.addEventListener('mouseleave', () => {
+                icons.forEach((otherIcon) => {
+                    if (otherIcon !== icon) {
+                        gsap.to(otherIcon, {
+                            scale: 1,
+                            duration: 0.5,
+                            ease: "back.out(1.7)"
+                        });
+                    }
+                });
+            });
+        })
     })
 
     return (
         <>
-            <div className='skill-section'>
-                <div className="skill-heading cursor-scale s">Skills</div>
+            <div className='skill-section' id='skills'>
+                <div className="skill-heading cursor-scale s" >TOols </div>
                 <div className='skill-icons'>
                     <img src="https://skillicons.dev/icons?i=c" alt="C" />
                     <img src="https://skillicons.dev/icons?i=cpp" alt="C++" />
@@ -66,8 +92,17 @@ const Skills = () => {
                     <img src="https://skillicons.dev/icons?i=vscode" alt="VSCode" />
                     <img src="https://skillicons.dev/icons?i=windows" alt="Windows" />
                     <img src="https://skillicons.dev/icons?i=typescript" alt="TypeScript" />
+                    <img src="https://skillicons.dev/icons?i=react" alt="React" />
+                    <img src="https://skillicons.dev/icons?i=vite" alt='Vite' />
+                    <img src="https://skillicons.dev/icons?i=tailwind" alt='Tailwind CSS' />
+                    <img src="https://skillicons.dev/icons?i=firebase" alt='Firebase' />
+                    <img src="https://skillicons.dev/icons?i=netlify" alt='Netlify' />
+                    <img src="https://skillicons.dev/icons?i=postgresql" alt='Postgresql' />
+                    <img src="https://skillicons.dev/icons?i=vercel" alt='Vercel' />
+                    <img src="https://skillicons.dev/icons?i=figma" alt='Figma' />
+                    <img src="https://skillicons.dev/icons?i=arch" alt='Arch' />
+                    <img src="https://skillicons.dev/icons?i=ubuntu" alt='Ubuntu' />
                 </div>
-
             </div>
         </>
     )

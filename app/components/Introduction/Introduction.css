@@ -1,24 +1,13 @@
 
-.dev-btn{
-    position: absolute;
-    padding: 1.5rem 3rem;
-    font-size: 1.2rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.2rem;
-    border: 2px solid #fff;
-    color: #fff;
-    background-color: transparent;
-    cursor: pointer;
-    transition: all 0.3s;
+.intro-main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
 }
 
-
 .intro-div{
-    position: relative;
-    top: 0;
-    left: 37%;
-    width: 50%;
+    margin: 0 15rem;
 }
 
 .intro-div .designation{
@@ -26,6 +15,10 @@
     font-size: 2.5rem;
     text-transform: uppercase;
     letter-spacing: 0.5rem;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid rgba(255, 255, 255, 0.75) ;
 }
 
 .intro-div .name1{
@@ -44,7 +37,49 @@
 .intro-div .description{
     font-size: 1.2rem;
     font-weight: 400;
-    width: 60%;
+    /* width: 60%; */
+}
+
+.connect{
+    margin-top: 1.5rem;
+    
+    font-size: 1.2rem;
+    padding: 0.8rem 1.5rem;
+    border: none;
 }
 
 
+.btn-container {
+    margin: 4rem 0 0 8px;
+    position: relative;
+    height: 55px;
+    width: 130px;
+    background: linear-gradient(to right, #00ffc8, #0008ff, #141aeb);
+}
+
+.connect-btn {
+    position: absolute;
+    right: 8px;
+    bottom: 8px;
+    height: 55px;
+    width: 130px;
+    background-color: white;
+    color: black;
+    font-size: 1.125rem; 
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+
+.connect-btn:hover {
+    right: 0;
+    bottom: 0;
+}
+
+.avatar{
+    border-radius: 50%;
+    width: 500px;
+    height: 100%;
+    margin: 0 20rem 0 0;
+}
