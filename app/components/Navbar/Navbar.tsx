@@ -39,26 +39,16 @@ export default function Navbar() {
     return (
         <nav>
             <div className='nav-head cursor-scale'>2&#62;/dev/null</div>
-            <div className={`nav-menu ${menuOpen ? 'open' : ''}`}>
+            <div className='nav-menu'>
                 <a href="#about">About</a>
                 <a href="#projects">Projects</a>
                 <a href="#skills">Skills</a>
                 <a href="#contact">Contact</a>
                 <button className='download-cv' onClick={downloadCV}>Download CV</button>
             </div>
-{/* 
-            <div className='sm-menu'>
-                <div className='menu-btn' onClick={() => setMenuOpen(!menuOpen)}>
-                    <i className="ri-menu-3-line"></i>
-                </div>
-                <div className='small-nav-menu' >
-                    <a href="#about">About</a>
-                    <a href="#projects">Projects</a>
-                    <a href="#skills">Skills</a>
-                    <a href="#contact">Contact</a>
-                    <button className='download-cv'>Download CV</button>
-                </div>
-            </div> */}
+            <div className='nav-menu-sm'>
+                <button className='download-cv' onClick={downloadCV}>Download CV</button>
+            </div>
         </nav>
     );
 }

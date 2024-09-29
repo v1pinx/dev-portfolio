@@ -4,12 +4,12 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0 15rem;
+    margin: 0 4rem;
     position: relative;
 }
 
 .nav-head {
-    font-size: 2.5rem;
+    font-size: 30px;
     font-weight: 800;
     font-style: italic;
     letter-spacing: 5px;
@@ -42,7 +42,7 @@ nav {
     border: 1px solid #fff;
     color: white;
     background-color: transparent;
-    padding: 0.5rem 1rem;
+    padding: 10px 20px;
     margin: 0 1rem;
     border-radius: 5px;
     font-size: 1.2rem;
@@ -56,62 +56,31 @@ nav {
     color: #333;
 }
 
-.sm-menu{
+.nav-menu-sm{
     display: none;
 }
 
-@media screen and (max-width: 1000px) {
-    nav {
-        margin: 0 2rem;
-        display: flex;
-        justify-content: center;
-        
-    }
-    .sm-menu{
-        display: block;
-    }
-    /* .nav-menu {
-        position: absolute;
-        top: 100%;
-        right: -100%;
-        background-color: rgba(0, 0, 0, 0.9);
-        width: 100%;
-        height: 100vh;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        opacity: 0;
-        transition: all 0.5s ease;
-    } */
-
-    .nav-menu{
+@media screen and (max-width: 1140px) {
+    .nav-menu {
         display: none;
     }
-    
-    .nav-head{
-        font-size: 2rem;
-    }
-
-    .nav-menu.open {
-        opacity: 1;
-        right: 0;
-    }
-
-    .nav-menu a {
-        margin: 1.5rem 0;
-        font-size: 1.5rem;
-    }
-
-    .download-cv {
-        margin-top: 2rem;
-    }
-
-    .menu-btn {
+    .nav-menu-sm{
         display: block;
     }
-    .menu-btn i {
-        font-size: 2rem;
+    
+}
+    
+
+@media screen and (max-width: 880px){
+    nav{
+        margin: 0 1.5rem;
+        padding: 1.5rem 0;
+    }
+    .nav-head{
+        font-size: 20px;
+    }
+    .download-cv{
+        padding: 5px 10px;
+        font-size: 0.8rem;
     }
 }
-
-

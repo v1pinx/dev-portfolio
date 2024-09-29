@@ -54,12 +54,12 @@ const Introduction = () => {
         gsap.fromTo(".designation", {
             width: "0",
         }, {
-            width: "9em",
+            width: "8.5em",
             duration: 2,
             ease: "steps(11)",
             yoyo: true,
             repeat: -1,
-            repeatDelay: 1 // Pause before reversing
+            repeatDelay: 1 
         }
         );
 
@@ -88,7 +88,7 @@ const Introduction = () => {
                     <div className='name1 cursor-scale'>Vipin Kumar</div>
                     <div className='description'>I'm a student skilled in web development, proficient in C++, Java, Next.js, and the MERN stack. I'm a tech geek who enjoys helping others, learning new technologies, and treating people with respect :)</div>
                     <div className="btn-container">
-                        <button className="connect-btn">Connect</button>
+                        <a href="https://www.linkedin.com/in/vipin01/"><button className="connect-btn" >Connect</button></a>
                     </div>
                 </div>
                 <Image src={Avatar} alt="" className='avatar' />

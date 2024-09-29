@@ -12,10 +12,10 @@ export default function Home() {
     <>
       <CustomCursor />
       <Navbar />
-      <SocialIcons />
+      {/* <SocialIcons /> */}
       <Introduction />
-      <Project />
-      <Skills />
+      {/* <Project /> */}
+      {/* <Skills /> */}
       {/* <Footer /> */}
     </>
   );
