@@ -84,5 +84,9 @@
     .avatar{
         display: none;
     }
+    .intro-main{
+        display: block;
+        margin: 0 2rem 0 2rem;
+    }
     
 }
