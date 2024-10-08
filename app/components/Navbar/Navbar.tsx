@@ -3,6 +3,7 @@ import { useGSAP } from '@gsap/react';
 import './Navbar.css';
 import { gsap } from 'gsap';
 import { useState } from 'react';
+import toast, { Toaster } from 'react-hot-toast';
 
 export default function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -36,14 +37,21 @@ export default function Navbar() {
         window.open('https://drive.google.com/file/d/1r_PNdS9dyZp042L10UUtSo36QhnPrvbx/view?usp=sharing', '_blank');
     }
 
+    function sorry() {
+        toast("Sorry, In Development", {
+            icon: '😅',
+        })
+    }
+
     return (
         <nav>
+            <Toaster />
             <div className='nav-head cursor-scale'>2&#62;/dev/null</div>
             <div className='nav-menu'>
-                <a href="#about">About</a>
-                <a href="#projects">Projects</a>
-                <a href="#skills">Skills</a>
-                <a href="#contact">Contact</a>
+                <a href="#about" >About</a>
+                <a href="#projects" onClick={sorry}>Projects</a>
+                <a href="#skills" onClick={sorry}>Skills</a>
+                <a href="#contact" onClick={sorry}>Contact</a>
                 <button className='download-cv' onClick={downloadCV}>Download CV</button>
             </div>
             <div className='nav-menu-sm'>

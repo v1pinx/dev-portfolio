@@ -5,6 +5,7 @@ import { gsap } from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from 'next/image';
+import toast, { Toaster } from 'react-hot-toast';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -16,7 +17,7 @@ const Introduction = () => {
                 trigger: ".intro-div",
                 start: "top 100%",
                 toggleActions: "play none none reverse none",
-            
+
             }
         });
 
@@ -59,7 +60,7 @@ const Introduction = () => {
             ease: "steps(11)",
             yoyo: true,
             repeat: -1,
-            repeatDelay: 1 
+            repeatDelay: 1
         }
         );
 
@@ -74,15 +75,17 @@ const Introduction = () => {
             ease: "steps(11)"
         }
         );
-
-
-
     });
 
-
+    function imgOnClick() {
+        toast("Am I handsome?", {
+            icon: '🤔',
+        })
+    }
     return (
         <>
             <div className='intro-main'>
+                <Toaster />
                 <div className='intro-div'>
                     <div className='designation cursor-scale s'>&#62; Developer</div>
                     <div className='name1 cursor-scale'>Vipin Kumar</div>
@@ -91,7 +94,7 @@ const Introduction = () => {
                         <a href="https://www.linkedin.com/in/vipin01/"><button className="connect-btn" >Connect</button></a>
                     </div>
                 </div>
-                <Image src={Avatar} alt="" className='avatar' />
+                <Image src={Avatar} alt="" className='avatar' onClick={imgOnClick} />
             </div>
         </>
 
