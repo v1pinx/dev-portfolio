@@ -33,7 +33,7 @@ export default function Navbar() {
     }, [menuOpen]);
 
     function downloadCV() {
-        window.open('/Resume.pdf', '_blank');
+        window.open('https://drive.google.com/file/d/1r_PNdS9dyZp042L10UUtSo36QhnPrvbx/view?usp=sharing', '_blank');
     }
 
     return (
