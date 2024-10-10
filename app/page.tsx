@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Project from "./components/Project/Project";
 import Skills from "./components/Skills/Skills";
 import SocialIcons from "./components/SocialIcons/SocialIcons";
+import { Analytics } from "@vercel/analytics/react"
 
 
 export default function Home() {
