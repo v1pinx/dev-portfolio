@@ -3,38 +3,62 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 4rem;
+    /* margin: 0 4rem; */
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
 }
 
+.intro-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Animated gradient blobs */
+.gradient-blob {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: linear-gradient(135deg, #00ffc8, #02067c);
+    filter: blur(100px);
+    opacity: 0.6;
+    animation: moveBlob 8s infinite ease-in-out alternate;
+    border-radius: 50%;
+    z-index: -2;
+}
+
+/* Random motion for the gradient blobs */
+@keyframes moveBlob {
+    0% { transform: translate(-50px, -50px) scale(1); }
+    50% { transform: translate(100px, 150px) scale(1.2); }
+    100% { transform: translate(-150px, -100px) scale(1); }
+}
 
 .intro-div .designation{
-    margin-top: 12vh;
-    font-size: 2.5rem;
+    margin-top: 3rem;
+    font-size: 1.5rem;
     text-transform: uppercase;
-    letter-spacing: 0.5rem;
+    letter-spacing: 0.3rem;
     display: inline-block;
     overflow: hidden;
     white-space: nowrap;
     border-right: 2px solid rgba(255, 255, 255, 0.75) ;
 }
 
-.intro-div .name1{
-    margin-top: 9vh;
-    font-size: 6rem;
-    font-weight: 650;
-    font-style: italic;
-}
-.intro-div .name2{
-    font-size: 6rem;
-    margin-top: -3vh;
+.intro-div .name1{  
+    margin-top: 1rem;
+    font-size: 2.8rem;
     font-weight: 650;
     font-style: italic;
 }
 
 .intro-div .description{
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     font-weight: 400;
     /* width: 60%; */
+    /* width: 35rem; */
 }
 
 .connect{
@@ -47,11 +71,12 @@
 
 
 .btn-container {
-    margin: 4rem 0 0 8px;
+    margin: 2rem 0 0 8px;
     position: relative;
     height: 55px;
     width: 130px;
-    background: linear-gradient(to right, #00ffc8, #0008ff, #141aeb);
+    background: linear-gradient(to right, #00ffc8, #16bcc2, #141aeb);
+    border-radius: 50px;
 }
 
 .connect-btn {
@@ -67,20 +92,31 @@
     border: none;
     cursor: pointer;
     transition: all 0.4s;
+    border-radius: 50px;
 }
 
 .connect-btn:hover {
     right: 0;
     bottom: 0;
+
 }
 
-.avatar{
+.avatar {
     border-radius: 50%;
-    width: 500px;
-    height: 100%;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin-top: 1rem;
+    box-shadow: 0 0 20px rgba(0, 140, 255, 0.6);
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-@media screen and (max-width: 1140px) {
+.avatar:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 40px rgb(42, 195, 255);
+}
+
+/* @media screen and (max-width: 1140px) {
     .avatar{
         display: none;
     }
@@ -89,4 +125,8 @@
         margin: 0 2rem 0 2rem;
     }
     
-}
+} */
+
+
+
+
