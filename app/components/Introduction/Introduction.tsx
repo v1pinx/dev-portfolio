@@ -93,8 +93,8 @@ const Introduction = () => {
 
                 <div className="intro-div">
                     <Image src={Avatar} alt="Profile Image" className="avatar" onClick={imgOnClick} />
-                    <div className="designation">&#62; Developer</div>
-                    <div className="name1">Vipin Kumar</div>
+                    <div className="designation cursor-scale s">&#62; Developer</div>
+                    <div className="name1 cursor-scale">Vipin Kumar</div>
                     <div className="btn-container">
                         <a href="https://www.linkedin.com/in/vipin01/">
                             <button className="connect-btn">Connect</button>
