@@ -45,8 +45,7 @@ export default function Navbar() {
 
     return (
         <nav>
-            <Toaster />
-            <div className='nav-head cursor-scale'>2&#62;/dev/null</div>
+            {/* <div className='nav-head cursor-scale'>2&#62;/dev/null</div> */}
             <div className='nav-menu'>
                 <a href="#about" >About</a>
                 <a href="#projects" onClick={sorry}>Projects</a>

@@ -1,11 +1,12 @@
 nav {
     color: white;
-    padding: 2rem 0;
+    padding: 2rem 4rem;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    margin: 0 4rem;
-    position: relative;
+    position: absolute;
+    background-color: transparent;
+    right: 0;
+    z-index: 1;
 }
 
 .nav-head {
