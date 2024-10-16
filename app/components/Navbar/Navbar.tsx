@@ -5,7 +5,7 @@ import { gsap } from 'gsap';
 import { useState } from 'react';
 import toast, { Toaster } from 'react-hot-toast';
 
-export default function Navbar() {
+export default function Navbar({ onMenuClick } : any) {
     const [menuOpen, setMenuOpen] = useState(false);
 
     // GSAP animations for menu show/hide
@@ -15,7 +15,8 @@ export default function Navbar() {
             duration: 0.7,
             y: 50,
             ease: "back.out(1.7)"
-        })
+        });
+
         if (menuOpen) {
             gsap.to('.small-nav-menu', {
                 x: 0,
@@ -37,20 +38,18 @@ export default function Navbar() {
         window.open('https://drive.google.com/file/d/1r_PNdS9dyZp042L10UUtSo36QhnPrvbx/view?usp=sharing', '_blank');
     }
 
-    function sorry() {
-        toast("Sorry, In Development", {
-            icon: '😅',
-        })
+    function handleMenuClick(component : any) {
+        onMenuClick(component);
+        setMenuOpen(false); // Close menu after selecting
     }
 
     return (
         <nav>
-            {/* <div className='nav-head cursor-scale'>2&#62;/dev/null</div> */}
             <div className='nav-menu'>
-                <a href="#about" >About</a>
-                <a href="#projects" onClick={sorry}>Projects</a>
-                <a href="#skills" onClick={sorry}>Skills</a>
-                <a href="#contact" onClick={sorry}>Contact</a>
+                <a href="#" onClick={() => handleMenuClick('introduction')}>About</a>
+                <a href="#" onClick={() => handleMenuClick('project')}>Projects</a>
+                <a href="#" onClick={() => handleMenuClick('skills')}>Skills</a>
+                <a href="#" onClick={() => handleMenuClick('contact')}>Contact</a>
                 <button className='download-cv' onClick={downloadCV}>Download CV</button>
             </div>
             <div className='nav-menu-sm'>
