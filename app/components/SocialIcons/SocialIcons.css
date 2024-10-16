@@ -1,10 +1,13 @@
 
 .social-icons{
-    position: fixed;
+    position: absolute;
     display: flex;
     flex-direction: column;
-    right: 5rem;
-    margin-top: 12vh;
+    justify-content: center;
+    left: 2em;
+    height: 100vh;
+    z-index: 2  ;
+    gap: 40px;
 }
 svg{
     margin-bottom: -1vh;
@@ -12,7 +15,7 @@ svg{
     flex-direction: column;
 }
 .social-icons a{
-    margin: 1.8rem 0 1.8rem 1rem;
+    
     text-decoration: none;
 }
 .social-icons a i{
