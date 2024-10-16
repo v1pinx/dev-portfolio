@@ -1,5 +1,5 @@
 "use client"
-import Avatar from '../../public/avatar.jpeg'
+import Avatar from '../../public/profile.jpg'
 import './Introduction.css';
 import { gsap } from 'gsap';
 import { useGSAP } from '@gsap/react';
@@ -21,7 +21,13 @@ const Introduction = () => {
             }
         });
 
-        tl.from('.designation', {
+        tl.from('.avatar', {
+            opacity: 0,
+            duration: 0.7,
+            y: 300,
+            ease: 'back.out(1.7)'
+        })
+        .from('.designation', {
             opacity: 0,
             duration: 0.7,
             y: 50,
@@ -33,12 +39,7 @@ const Introduction = () => {
                 y: 50,
                 ease: "back.out(1.7)"
             }, "-=0.5")
-            .from('.name2', {
-                opacity: 0,
-                duration: 0.7,
-                y: 50,
-                ease: "back.out(1.7)"
-            }, "-=0.5")
+            
             .from('.description', {
                 opacity: 0,
                 duration: 0.7,
@@ -55,7 +56,7 @@ const Introduction = () => {
         gsap.fromTo(".designation", {
             width: "0",
         }, {
-            width: "8.5em",
+            width: "8.8em",
             duration: 2,
             ease: "steps(11)",
             yoyo: true,
@@ -83,19 +84,22 @@ const Introduction = () => {
         })
     }
     return (
-        <>
-            <div className='intro-main'>
-                <Toaster />
-                <div className='intro-div'>
-                    <div className='designation cursor-scale s'>&#62; Developer</div>
-                    <div className='name1 cursor-scale'>Vipin Kumar</div>
-                    <div className='description'>I'm a student skilled in web development, proficient in C++, Java, Next.js, and the MERN stack. I'm a tech geek who enjoys helping others, learning new technologies, and treating people with respect :)</div>
-                    <div className="btn-container">
-                        <a href="https://www.linkedin.com/in/vipin01/"><button className="connect-btn" >Connect</button></a>
-                    </div>
-                </div>
-                <Image src={Avatar} alt="" className='avatar' onClick={imgOnClick} />
+        <><div className="intro-main background-glitch">
+        <div className="gradient-blob" style={{ top: '-10%', left: '-10%' }}></div>
+        <div className="gradient-blob" style={{ bottom: '-10%', right: '-15%' }}></div>
+    
+        <div className="intro-div">
+            <Image src={Avatar} alt="Profile Image" className="avatar" onClick={imgOnClick} />
+            <div className="designation">&#62; Developer</div>
+            <div className="name1">Vipin Kumar</div>
+            <div className="btn-container">
+                <a href="https://www.linkedin.com/in/vipin01/">
+                    <button className="connect-btn">Connect</button>
+                </a>
             </div>
+        </div>
+    </div>
+    
         </>
 
     )
