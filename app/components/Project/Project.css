@@ -1,24 +1,26 @@
 
 .project-section{
     position: relative;
-    margin-top: 6vh;
-    /* left: 37%; */
-    margin: 12vh 15rem 0 15rem;
-    /* width: 63%; */
-    /* background-color: red; */
-    /* text-decoration: underline; */
+    margin-top: 14vh;
 }
 
 .project-heading{
-    font-size: 3rem;
+    font-size: 2em;
     text-transform: uppercase;
     letter-spacing: 0.2rem;
     font-weight: 600;
+    text-align: center;
+    /* margin-left: 3em; */
+
 }
 .project-cards{
     display: flex;
-    flex-wrap: wrap;
     margin-top: 2vh;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-left: 3em;
+
 }
 
 .project-card {
@@ -26,8 +28,8 @@
     margin-top: 3vh;
     margin-right: 3vh;
     padding: 30px;
-    height: 550px;
-    width: 3800px;
+    height: 500px;
+    width: 400px;
     position: relative; 
     transition: filter 0.3s ease;
 }
@@ -42,17 +44,18 @@
 
 
 .project-name{
-    font-size: 1.5rem;
-    /* text-transform: uppercase; */
-    /* letter-spacing: 0.2rem; */
+    font-size: 1.2em;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
     font-weight: 600;
     margin-top: 1vh;
+    text-align: left;
 }
 
 .project-description{
-    font-size: 1rem;
+    font-size: 0.8rem;
     font-weight: 400;
-    margin-top: 1vh;
+    margin-top: 0.5vh;
 }
 
 
