@@ -1,4 +1,5 @@
 'use client'
+import Contact from "./components/Contact/Contact";
 import CustomCursor from "./components/CustomCursor/CustomCursor";
 import Footer from "./components/Footer/Footer";
 import Introduction from "./components/Introduction/Introduction";
@@ -21,11 +22,11 @@ export default function Home() {
       <>
           <CustomCursor />
           <Navbar onMenuClick={handleMenuClick} />
-          {/* <SocialIcons /> */}
 
           {activeComponent === 'introduction' && <Introduction />}
           {activeComponent === 'project' && <Project />}
           {activeComponent === 'skills' && <Skills />}
+          {activeComponent === 'contact' && <Contact />}
       </>
   );
 }

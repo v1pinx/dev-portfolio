@@ -1,0 +1,14 @@
+.contact-container{
+    margin-top: 100px;
+    margin-left: 15vw;
+}
+
+.contact-head{
+    font-size: 3em;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.contact-data{
+    margin-top: 10px;
+}
