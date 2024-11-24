@@ -93,7 +93,6 @@ const Project = () => {
     return (
         <>
             <div>
-
                 <div className='project-section' id='projects'>
                     <div className='project-heading cursor-scale s'>Projects</div>
                     <div className='project-cards'>

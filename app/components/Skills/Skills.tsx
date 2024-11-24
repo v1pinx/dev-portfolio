@@ -72,13 +72,10 @@ const Skills = () => {
                     <img src="https://skillicons.dev/icons?i=c" alt="C" />
                     <img src="https://skillicons.dev/icons?i=cpp" alt="C++" />
                     <img src="https://skillicons.dev/icons?i=css" alt="CSS" />
-                    <img src="https://skillicons.dev/icons?i=discord" alt="Discord" />
                     <img src="https://skillicons.dev/icons?i=express" alt="Express" />
                     <img src="https://skillicons.dev/icons?i=git" alt="Git" />
                     <img src="https://skillicons.dev/icons?i=github" alt="GitHub" />
-                    <img src="https://skillicons.dev/icons?i=gmail" alt="Gmail" />
                     <img src="https://skillicons.dev/icons?i=html" alt="HTML" />
-                    <img src="https://skillicons.dev/icons?i=instagram" alt="Instagram" />
                     <img src="https://skillicons.dev/icons?i=java" alt="Java" />
                     <img src="https://skillicons.dev/icons?i=javascript" alt="JavaScript" />
                     <img src="https://skillicons.dev/icons?i=kali" alt="Kali Linux" />

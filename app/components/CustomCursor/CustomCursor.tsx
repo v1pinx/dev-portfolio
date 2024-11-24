@@ -17,7 +17,7 @@ const CustomCursor = () => {
     });
 
     gsap.to({}, { 
-      duration: 0.016,
+      duration: 0.01,
       repeat: -1,
       onRepeat: () => {
         gsap.set(cursor, {
