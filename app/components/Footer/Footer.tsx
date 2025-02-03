@@ -1,24 +1,7 @@
 'use client'
 import './Footer.css';
-import { gsap } from 'gsap';
-import { useGSAP } from '@gsap/react';
-
 export default function Footer() {
 
-    useGSAP(() => {
-        let path = `M 10 100 Q 500 10 990 100`;
-        let finalPath = `M 10 100 Q 500 10 990 100`;
-
-        let string = document.getElementById('string');
-        string?.addEventListener('mousemove', function(e){
-            path = `M 10 100 Q 500 ${e.clientY} 990 100`;
-
-            gsap.to('svg path',{
-                attr:{d:path},
-            })
-        })
-
-    })
 
     return (
         <footer>
