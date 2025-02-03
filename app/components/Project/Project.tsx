@@ -60,7 +60,15 @@ const projectData = [
     }
 ];
 
-const ProjectCard = ({ image, name, category, description, link }) => {
+interface ProjectCardProps {
+    image: string;
+    name: string;
+    category: string;
+    description: string;
+    link: string;
+}
+
+const ProjectCard = ({ image, name, category, description, link }: ProjectCardProps) => {
     return (
         <motion.div
             layout
@@ -89,7 +97,7 @@ const ProjectCard = ({ image, name, category, description, link }) => {
 const Project = () => {
     const [selectedCategory, setSelectedCategory] = useState('All');
 
-    const categories = ['All', ...new Set(projectData.map(project => project.category))];
+    const categories = ['All', ...Array.from(new Set(projectData.map(project => project.category)))];
 
     const filteredProjects = selectedCategory === 'All'
         ? projectData

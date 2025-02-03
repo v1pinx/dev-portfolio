@@ -40,7 +40,7 @@ const DiscordPresence = () => {
             const data = JSON.parse(event.data);
             if (data.t === "INIT_STATE" || data.t === "PRESENCE_UPDATE") {
                 setStatus(data.d.discord_status);
-                const filteredActivities = data.d.activities?.filter((activity) => {
+                const filteredActivities = data.d.activities?.filter((activity: any) => {
                     return (
                         activity.name === "Spotify" ||
                         activity.name === "Code" ||
@@ -119,8 +119,7 @@ const DiscordPresence = () => {
     );
 };
 
-// Live Timer Component
-const LiveTimer = ({ startTime }) => {
+const LiveTimer = ({ startTime }: { startTime: number | undefined }) => {
     const [time, setTime] = useState(0);
 
     useEffect(() => {
@@ -135,7 +134,7 @@ const LiveTimer = ({ startTime }) => {
         return () => clearInterval(interval);
     }, [startTime]);
 
-    const formatTime = (seconds) => {
+    const formatTime = (seconds: number) => {
         const minutes = Math.floor(seconds / 60);
         const remainingSeconds = seconds % 60;
         return `${minutes}:${remainingSeconds}`;
