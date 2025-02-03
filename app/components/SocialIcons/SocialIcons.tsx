@@ -1,9 +1,5 @@
 "use client"
-import 'remixicon/fonts/remixicon.css';
 import './SocialIcons.css';
-import { gsap } from 'gsap';
-import { useGSAP } from '@gsap/react';
-
 const SocialIcons = () => {
 
     const links = [
@@ -16,24 +12,6 @@ const SocialIcons = () => {
             'youtube': 'https://www.youtube.com/@solved.youtube'
         }
     ]
-
-    useGSAP(() => {
-        let tl = gsap.timeline();
-        tl.from('.social-icons', {
-            opacity: 0,
-            duration: 0.7,
-            y: 50,
-            ease: "back.out(1.7)"
-        });
-
-        tl.from('.social-icons a', {
-            opacity: 0,
-            duration: 0.7,
-            y: 50,
-            ease: "back.out(1.7)",
-            stagger: 0.1
-        }, "-=0.5");
-    });
 
     return (
         <>
