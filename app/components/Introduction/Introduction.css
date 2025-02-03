@@ -1,132 +1,204 @@
-
-.intro-main{
+.intro__wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* margin: 0 4rem; */
     height: 100vh;
     position: relative;
     overflow: hidden;
 }
 
-.intro-div{
+.intro__container {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    width: 90%;
+    max-width: 1300px;
+    margin: 0 auto;
 }
 
-/* Animated gradient blobs */
-.gradient-blob {
-    position: absolute;
+.intro__content {
+    flex: 1;
+    max-width: 600px;
+    text-align: left;
+}
+
+.intro__img--wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.intro__img--mobile {
+    display: none; 
+}
+
+.intro__banner {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.intro__profile {
+    border-radius: 50%;
     width: 400px;
     height: 400px;
-    background: linear-gradient(135deg, #00ffc8, #02067c);
-    filter: blur(100px);
-    opacity: 0.6;
-    animation: moveBlob 8s infinite ease-in-out alternate;
-    border-radius: 50%;
-    z-index: -2;
-}
-
-/* Random motion for the gradient blobs */
-@keyframes moveBlob {
-    0% { transform: translate(-50px, -50px) scale(1); }
-    50% { transform: translate(100px, 150px) scale(1.2); }
-    100% { transform: translate(-150px, -100px) scale(1); }
-}
-
-.intro-div .designation{
-    margin-top: 3rem;
-    font-size: 1.5rem;
-    text-transform: uppercase;
-    letter-spacing: 0.3rem;
-    display: inline-block;
-    overflow: hidden;
-    white-space: nowrap;
-    border-right: 2px solid rgba(255, 255, 255, 0.75) ;
-}
-
-.intro-div .name1{  
-    margin-top: 1rem;
-    font-size: 2.8rem;
-    font-weight: 650;
-    font-style: italic;
-}
-
-.intro-div .description{
-    font-size: 1.5rem;
-    font-weight: 400;
-    /* width: 60%; */
-    /* width: 35rem; */
-}
-
-.connect{
-    margin-top: 1.5rem;
-    
-    font-size: 1.2rem;
-    padding: 0.8rem 1.5rem;
-    border: none;
-}
-
-
-.btn-container {
-    margin: 2rem 0 0 8px;
-    position: relative;
-    height: 55px;
-    width: 130px;
-    background: linear-gradient(to right, #00ffc8, #16bcc2, #141aeb);
-    border-radius: 50px;
-}
-
-.connect-btn {
-    position: absolute;
-    right: 8px;
-    bottom: 8px;
-    height: 55px;
-    width: 130px;
-    background-color: white;
-    color: black;
-    font-size: 1.125rem; 
-    font-weight: 500;
-    border: none;
-    cursor: pointer;
-    transition: all 0.4s;
-    border-radius: 50px;
-}
-
-.connect-btn:hover {
-    right: 0;
-    bottom: 0;
-
-}
-
-.avatar {
-    border-radius: 50%;
-    width: 200px;
-    height: 200px;
     object-fit: cover;
-    margin-top: 1rem;
-    box-shadow: 0 0 20px rgba(0, 140, 255, 0.6);
     transition: transform 0.3s, box-shadow 0.3s;
 }
-
-.avatar:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 40px rgb(42, 195, 255);
+.intro__designation {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    margin: 10px 0;
 }
 
-/* @media screen and (max-width: 1140px) {
-    .avatar{
-        display: none;
+.intro__designation b {
+    display: inline-block;
+}
+
+.intro__subtitle {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--white);
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+}
+
+.intro__subtitle span {
+    color: var(--orange);
+}
+
+.intro__name {
+    font-size: clamp(2.25rem, 1.125rem + 5.1429vw, 5.225rem);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    /* margin: 10px 0; */
+}
+/* .intro__name span::selection {
+    -webkit-text-stroke: 2px var(--black);
+    background-color: #073BA6;
+}
+   */
+
+.intro__name span:first-child {
+    color: var(--orange);
+}
+
+.intro__name span:last-child {
+    color: var(--white);
+}
+
+.intro__text {
+    font-size: 18px;
+    max-width: 520px;
+    margin: 20px 0;
+    line-height: 1.5;
+}
+
+.intro__socials {
+    display: flex;
+    gap: 1rem;
+    margin: 20px 0;
+}
+
+.intro__socials a {
+    color: var(--white);
+    font-size: 1.5rem;
+    transition: all 0.4s;
+}
+
+.intro__socials a:hover {
+    transform: translateY(-5px);
+    color: var(--orange);
+}
+
+.intro__btns {
+    margin-top:35px;
+    display: flex;
+    column-gap: 70px;
+}
+
+.btn__text {
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--white);
+    box-shadow: var(--shadow);
+    padding: 15px 40px;
+    height: 56px;
+    place-items: center;
+    border-radius: 56px;
+    border: 1px solid var(--white);
+    transition: all 0.4s;
+}
+
+.btn__text:hover {
+    background-color: var(--orange);
+    border-color: var(--orange);
+    transform: translateY(-3px);
+}
+
+@media (max-width: 768px) {
+    .intro__container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
-    .intro-main{
-        display: block;
-        margin: 0 2rem 0 2rem;
+
+    .intro__img--desktop {
+        display: none; 
     }
-    
-} */
 
+    .intro__img--mobile {
+        display: flex; 
+        justify-content: center;
+        margin: 20px 0;
+    }
 
+    .intro__profile {
+        width: 300px;
+        height: 300px;
+    }
 
+    .intro__content {
+        text-align: center;
+    }
 
+    .intro__socials {
+        justify-content: center;
+    }
+
+    .intro__btns {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.card__dot-grid1 {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    width: 60px;
+    height: 60px;
+    background-image: radial-gradient(circle, var(--orange) 10%, transparent 10%);
+    background-size: 10px 10px;
+    opacity: 0.5;
+    animation: fadeIn 1s ease-in-out infinite alternate;
+}
+
+.card__dot-grid2 {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    width: 60px;
+    height: 60px;
+    background-image: radial-gradient(circle, var(--orange) 10%, transparent 10%);
+    background-size: 10px 10px;
+    opacity: 0.5;
+    animation: fadeIn 1s ease-in-out infinite alternate;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0.5; }
+    to { opacity: 1; }
+}

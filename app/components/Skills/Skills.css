@@ -1,26 +1,234 @@
-.skill-section{
-    position: relative;
-    margin: 12vh 15rem 0 15rem;
-    /* left: 37%;
-    width: 63%; */
-    /* background-color: red; */
+
+.skills__badges-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 badges in a row */
+    gap: 2rem;
+    width: 100%;
+    max-width: 1200px;
 }
 
-.skill-heading{
-    font-size: 3rem;
-    text-transform: uppercase;
-    letter-spacing: 0.2rem;
-    font-weight: 600;
+.skills__item {
+    background-color: var(--gray);
+    padding: 1.5rem;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
 }
 
-.skill-icons{
-    margin-top: 5vh;
-    /* width: 80%; */
+.skills__item:hover {
+    scale: 1.1;
+}
+
+@keyframes breathey {
+	0% {
+		transform: scaleX(1);
+        transform-origin: left;
+	}
+	25% {
+		transform: scaleX(0.95);
+        transform-origin: left;
+	}
+	75% {
+		transform: scaleX(1.05);
+        transform-origin: left;
+	}
+    100% {
+		transform: scaleX(1);
+        transform-origin: left;
+	}
+}
+
+skills__item:hover .skills__percentage{
+    animation: breathey 2s ease-in-out infinite;
+}
+
+.skills__title {
     display: flex;
-    gap: 3rem;;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.skills__name {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--white);
+}
+
+.skills__number {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--orange);
+}
+
+.skills__description {
+    font-size: 0.9rem;
+    color: var(--white);
+    margin-bottom: 1rem;
+}
+
+.skills__bar {
+    width: 100%;
+    height: 8px;
+    background-color: var(--dark-gray);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.skills__percentage {
+    display: block;
+    height: 100%;
+    background-color: var(--orange);
+    border-radius: 4px;
+    position: relative;
+}
+
+.skills__percentage span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--orange);
+    border-radius: 4px;
+}
+
+.section__icons-wrapper {
+    max-width: 1300px;
+    margin: 15px auto;
+}
+
+.section__icons-container {
+    margin-top: 5vh;
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
     flex-wrap: wrap;
 }
+.section__icons{
+    display: flex;
+    align-items: center;
+    gap: .4rem;
+    flex-direction: column;
+}
 
-.skill-icons img{
-    width: 6rem;    
+.section__icons img {
+    width: 3rem;
+    transition: all 0.3s ease-in-out;
+}
+.section__icons img + p {
+    color: var(--white);
+    transition: all 0.3s ease-in-out;
+}
+
+.section__icons img:hover {
+    filter: brightness(120%);
+    scale: 1.3;
+}
+
+.section__icons img:hover + p {
+    color: var(--orange);
+}
+
+.section__icons p {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--white);
+    text-align: center;
+}
+
+@media (max-width: 1024px) {
+    .skills__badges-container {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+
+@media (max-width: 768px) {
+    .skills__badges-container {
+        grid-template-columns: repeat(1, 1fr); 
+    }
+
+    .text-cs {
+        font-size: 2.5rem; 
+    }
+
+    .section__subtitle span {
+        font-size: 1.5rem; 
+    }
+
+    .skills__item {
+        padding: 1rem; 
+    }
+
+    .skills__name {
+        font-size: 1rem; 
+    }
+
+    .skills__description {
+        font-size: 0.8rem; 
+    }
+
+    .section__icons img {
+        width: 2.5rem; 
+    }
+
+    .section__icons p {
+        font-size: 0.8rem; 
+    }
+}
+
+@media (max-width: 480px) {
+    .skills__badges-container {
+        gap: 1rem;
+    }
+
+    .skills__item {
+        padding: 0.8rem;
+    }
+
+    .skills__name {
+        font-size: 0.9rem; 
+    }
+
+    .skills__description {
+        font-size: 0.75rem; 
+    }
+
+    .section__icons img {
+        width: 2rem; 
+    }
+
+    .section__icons p {
+        font-size: 0.75rem; 
+    }
+}
+
+
+
+.card__dot-grid1 {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    width: 60px;
+    height: 60px;
+    background-image: radial-gradient(circle, var(--orange) 10%, transparent 10%);
+    background-size: 10px 10px;
+    opacity: 0.5;
+    animation: fadeIn 1s ease-in-out infinite alternate;
+}
+
+.card__dot-grid2 {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    width: 60px;
+    height: 60px;
+    background-image: radial-gradient(circle, var(--orange) 10%, transparent 10%);
+    background-size: 10px 10px;
+    opacity: 0.5;
+    animation: fadeIn 1s ease-in-out infinite alternate;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0.5; }
+    to { opacity: 1; }
 }

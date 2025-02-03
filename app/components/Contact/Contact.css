@@ -1,14 +1,217 @@
-.contact-container{
-    margin-top: 150px;
-    margin-left: 15vw;
+
+.contact__container {
+    display: flex;
+    justify-content: center;
+    gap: 150px;
 }
 
-.contact-head{
-    font-size: 3em;
+.contact__input {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    min-width: 300px;
+}
+
+.contact__input-1 {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+label {
+    font-size: 0.8rem;
+    margin: 10px 0 9px 0;
+    color: var(--white);
     font-weight: 600;
+    text-align: left;
+    padding-left: 25px;
     text-transform: uppercase;
 }
 
-.contact-data{
-    margin-top: 10px;
+.contact__input-name,
+.contact__input-email,
+.contact__input-subject {
+    height: 60px;
+    border-radius: 60px;
+    padding: 15px 25px;
+    border: 2px solid var(--white);
+    background-color: var(--black);
+    color: var(--white);
+    font-size: 15px;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+}
+
+.contact__input-message {
+    height: 200px;
+    border-radius: 20px;
+    padding: 15px 25px;
+    border: 2px solid var(--white);
+    background-color: var(--black);
+    color: var(--white);
+    font-size: 15px;
+}
+
+.contact__card {
+    margin-top: 30px;
+    padding-left: 130px;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.contact__card-icon,
+.contact__form-input {
+    border: 2px solid var(--white);
+    background-color: var(--gray);
+}
+
+.contact__card-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    box-shadow: var(--shadow);
+    font-size: 1.3rem;
+    display: grid;
+    place-items: center;
+}
+
+.contact__card-icon::after {
+    content: '';
+    width: 40px;
+    height: 2px;
+    background-color: var(--white);
+    position: absolute;
+    left: 100%;
+    top: 50%;
+    margin-top: -1px;
+}
+
+.contact__card-title {
+    font-size: 1.8rem;
+    font-family: 'Caveat', cursive;
+    padding-block: 6px;
+    font-weight: 700;
+    color: var(--orange);
+}
+
+.contact__button {
+    padding: 15px 25px;
+    border-radius: 60px;
+    border: 2px solid var(--white);
+    background-color: var(--black);
+    color: var(--white);
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    font-weight: 700;
+    align-self: flex-start
+}
+
+.contact__button:hover {
+    background-color: var(--orange);
+    border: 2px solid var(--orange);
+}
+
+@media screen and (max-width: 1236px) {
+    .contact__container {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .contact__card {
+        padding-left: 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .contact__input-1 {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .contact__input {
+        min-width: 100%;
+    }
+
+    .contact__input-name,
+    .contact__input-email,
+    .contact__input-subject {
+        height: 50px;
+        font-size: 14px;
+    }
+
+    .contact__input-message {
+        height: 150px;
+        font-size: 14px;
+    }
+
+    .contact__card {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .contact__card-icon {
+        display: none;
+    }
+
+    .contact__card-title {
+        font-size: 1.5rem;
+    }
+
+    .section__title {
+        font-size: 1.8rem;
+    }
+
+    .text-cs {
+        font-size: 2rem;
+    }
+
+    .section__subtitle {
+        font-size: 0.9rem;
+    }
+
+    .section__subtitle span {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .contact__input-name,
+    .contact__input-email,
+    .contact__input-subject {
+        height: 40px;
+        font-size: 12px;
+    }
+
+    .contact__input-message {
+        height: 120px;
+        font-size: 12px;
+    }
+
+    .contact__card-title {
+        font-size: 1.2rem;
+    }
+
+    .section__title {
+        font-size: 1.5rem;
+    }
+
+    .text-cs {
+        font-size: 1.8rem;
+    }
+
+    .section__subtitle {
+        font-size: 0.8rem;
+    }
+
+    .section__subtitle span {
+        font-size: 1.2rem;
+    }
 }

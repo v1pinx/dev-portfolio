@@ -1,74 +1,141 @@
 
-.project-section{
-    position: relative;
-    margin-top: 14vh;
-}
-
-.project-heading{
-    font-size: 2em;
-    text-transform: uppercase;
-    letter-spacing: 0.2rem;
-    font-weight: 600;
-    text-align: center;
-    /* margin-left: 3em; */
-
-}
-.project-cards{
+.project__container {
     display: flex;
-    margin-top: 2vh;
-    justify-content: center;
-    align-items: center;
     flex-wrap: wrap;
-    margin-left: 3em;
-
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 2vh;
+    /* max-width: 1500px; */
+    /* width: 100px; */
+    max-width: 1300px;
+    padding: 0 1rem;
 }
 
-.project-card {
-    border: 1px solid white;
-    margin-top: 3vh;
-    margin-right: 3vh;
-    padding: 30px;
-    height: 500px;
-    width: 400px;
-    position: relative; 
-    transition: filter 0.3s ease;
-}
-
-
-.project-card img{
-    width: 100%;
-    height: 50%;
-    object-fit: cover;
-    border-radius: 10px;
-}
-
-
-.project-name{
-    font-size: 1.2em;
-    text-transform: uppercase;
-    letter-spacing: 0.2rem;
-    font-weight: 600;
-    margin-top: 1vh;
-    text-align: left;
-}
-
-.project-description{
-    font-size: 0.8rem;
-    font-weight: 400;
-    margin-top: 0.5vh;
-}
-
-
-.project-btn{
-    position: absolute;
-    right: 30px;
-    bottom: 30px;
-    font-size: 1.2rem;
-    padding: 0.5rem 1rem;
+.card {
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    padding: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
+    text-align: left;
+    width: 400px;
+    height: 480px;
+}
+
+.card:hover .card__img-wrapper img {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.card__img-wrapper {
+    width: 100%;
+    height: 220px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.card__img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* margin-top: 0.5rem; */
+}
+
+.card__category {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--orange);
+}
+
+.card__link {
+    font-size: 1.5rem;
+    color: var(--white);
+    transition: color 0.3s ease;
+}
+
+.card__link:hover {
+    color: var(--orange);
+}
+
+.card__name {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top: 0.5rem;
+}
+
+.card__description {
+    font-size: .9rem;
+    font-weight: 400;
+    margin-top: 0.5rem;
 }
 
 
-.project-card.blurred {
-    filter: blur(4px); 
+.card__dot-grid {
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+    width: 50px;
+    height: 50px;
+    background-image: radial-gradient(circle, var(--orange) 10%, transparent 10%);
+    background-size: 10px 10px;
+    opacity: 0.5;
+    animation: fadeIn 1s ease-in-out infinite alternate;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0.5; }
+    to { opacity: 1; }
+}
+
+
+@media (max-width: 768px) {
+    .text-cs {
+        font-size: 2rem;
+    }
+    .project__container {
+        grid-template-columns: 1fr;
+    }
+    .card {
+        padding: 1rem;
+    }
+}
+
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.filter-button {
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--orange);
+    border-radius: 20px;
+    background-color: transparent;
+    color: var(--white);
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.filter-button:hover {
+    background-color: var(--orange);
+    color: var(--black);
+}
+
+.filter-button.active {
+    background-color: var(--orange);
+    color: var(--white);
 }

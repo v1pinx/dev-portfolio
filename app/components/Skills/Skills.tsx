@@ -1,128 +1,63 @@
 "use client"
 import './Skills.css';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
 
-import { gsap } from 'gsap';
-import { useGSAP } from '@gsap/react';
-import { ScrollTrigger } from 'gsap/all';
-gsap.registerPlugin(ScrollTrigger);
+const skillArr = ['c', 'cpp', 'java', 'javascript', 'python', 'typescript', 'html', 'css', 'tailwind', 'react', 'next', 'vite', 'express', 'nodejs', 'mongodb', 'postgresql', 'mysql', 'git', 'github', 'postman', 'vscode', 'windows', 'figma', 'netlify', 'vercel', 'docker', 'arch'];
+
+const skills = [
+    { name: 'JavaScript', percentage: 90, description: 'Proficient in building interactive web applications.' },
+    { name: 'React', percentage: 85, description: 'Experienced in building reusable components and managing state.' },
+    { name: 'Node.js', percentage: 80, description: 'Skilled in building scalable backend services.' },
+    { name: 'CSS', percentage: 75, description: 'Adept at creating responsive and visually appealing designs.' },
+    { name: 'Python', percentage: 70, description: 'Familiar with data analysis and scripting.' },
+    { name: 'TypeScript', percentage: 65, description: 'Experienced in building type-safe applications.' },
+];
 
 const Skills = () => {
-
-    useGSAP(() => {
-        gsap.from('.skill-heading', {
-            scrollTrigger: {
-                trigger: '.skill-heading',
-                start: 'top 90%',
-                toggleActions: 'play none none none'
-
-            },
-            opacity: 0,
-            duration: 0.7,
-            y: 50,
-            ease: "back.out(1.7)",
-        });
-
-        gsap.from('.skill-icons img', {
-            scrollTrigger: {
-                trigger: '.skill-icons img',
-                start: "top 80%",
-                toggleActions: "play none none reverse none",
-            },
-            opacity: 0,
-            duration: 0.5,
-            y: 50,
-            ease: "back.out(1.7)",
-            stagger: 0.1,
-
-        });
-
-        let icons = document.querySelectorAll('.skill-icons img');
-        icons.forEach((icon) => {
-            icon.addEventListener('mouseenter', () => {
-                icons.forEach((otherIcon) => {
-                    if (otherIcon !== icon) {
-                        gsap.to(otherIcon, {
-                            scale: 0.8,
-                            duration: 0.5,
-                            ease: "back.out(1.7)"
-                        });
-                    }
-                });
-            });
-
-            icon.addEventListener('mouseleave', () => {
-                icons.forEach((otherIcon) => {
-                    if (otherIcon !== icon) {
-                        gsap.to(otherIcon, {
-                            scale: 1,
-                            duration: 0.5,
-                            ease: "back.out(1.7)"
-                        });
-                    }
-                });
-            });
-        })
-    })
-
+    useEffect(()=>{
+        AOS.init({duration:500});
+    },[]);
     return (
         <>
-            <div className='skill-section' id='skills'>
-                <div className="skill-heading cursor-scale s" >TOols </div>
-                <div className='skill-icons'>
-                    {/* Programming Languages  */}
-                    <img src="https://skillicons.dev/icons?i=c" alt="C" />
-                    <img src="https://skillicons.dev/icons?i=cpp" alt="C++" />
-                    <img src="https://skillicons.dev/icons?i=java" alt="Java" />
-                    <img src="https://skillicons.dev/icons?i=javascript" alt="JavaScript" />
-                    <img src="https://skillicons.dev/icons?i=python" alt="Python" />
-                    <img src="https://skillicons.dev/icons?i=typescript" alt="TypeScript" />
+            <section className='section skills' id='skills'>
+                <h2 className="section__title text-cs" data-aos="fade-up">Professional Skills</h2>
+                <p className="section__subtitle" data-aos="fade-up">
+                    MY <span>Tools</span>
+                </p>
 
-                    {/* Frontend Development  */}
-                    <img src="https://skillicons.dev/icons?i=html" alt="HTML" />
-                    <img src="https://skillicons.dev/icons?i=css" alt="CSS" />
-                    <img src="https://skillicons.dev/icons?i=tailwind" alt="Tailwind CSS" />
-                    <img src="https://skillicons.dev/icons?i=react" alt="React" />
-                    <img src="https://skillicons.dev/icons?i=next" alt="Next" />
-                    <img src="https://skillicons.dev/icons?i=vite" alt="Vite" />
-                    <img src="https://skillicons.dev/icons?i=jquery" alt="jQuery" />
-
-                    {/* Backend Development */}
-                    <img src="https://skillicons.dev/icons?i=express" alt="Express" />
-                    <img src="https://skillicons.dev/icons?i=nodejs" alt="Node.js" />
-                    <img src="https://skillicons.dev/icons?i=mongodb" alt="MongoDB" />
-                    <img src="https://skillicons.dev/icons?i=postgresql" alt="PostgreSQL" />
-                    <img src="https://skillicons.dev/icons?i=mysql" alt="MySQL" />
-
-                    {/* Version Control & Collaboration  */}
-                    <img src="https://skillicons.dev/icons?i=git" alt="Git" />
-                    <img src="https://skillicons.dev/icons?i=github" alt="GitHub" />
-                    <img src="https://skillicons.dev/icons?i=linkedin" alt="LinkedIn" />
-
-                    {/* Development Tools  */}
-                    <img src="https://skillicons.dev/icons?i=postman" alt="Postman" />
-                    <img src="https://skillicons.dev/icons?i=vscode" alt="VSCode" />
-                    <img src="https://skillicons.dev/icons?i=replit" alt="Replit" />
-                    <img src="https://skillicons.dev/icons?i=windows" alt="Windows" />
-                    <img src="https://skillicons.dev/icons?i=figma" alt="Figma" />
-
-                    {/* Cloud & DevOps  */}
-                    <img src="https://skillicons.dev/icons?i=firebase" alt="Firebase" />
-                    <img src="https://skillicons.dev/icons?i=netlify" alt="Netlify" />
-                    <img src="https://skillicons.dev/icons?i=vercel" alt="Vercel" />
-                    <img src="https://skillicons.dev/icons?i=docker" alt="Docker" />
-
-                    {/* Operating Systems  */}
-                    <img src="https://skillicons.dev/icons?i=kali" alt="Kali Linux" />
-                    <img src="https://skillicons.dev/icons?i=linux" alt="Linux" />
-                    <img src="https://skillicons.dev/icons?i=arch" alt="Arch" />
-                    <img src="https://skillicons.dev/icons?i=ubuntu" alt="Ubuntu" />
-                    <img src="https://skillicons.dev/icons?i=windows" alt="Windows" />
-
-                    {/* Other Technologies  */}
-                    <img src="https://skillicons.dev/icons?i=jquery" alt="jQuery" />
-
+                <div className="skills__badges-container" data-aos="fade-left">
+                    {skills.map(({ name, percentage, description }, index) => (
+                        <div className="skills__item" key={index}>
+                            <div className="skills__title">
+                                <h3 className="skills__name">{name}</h3>
+                                <span className="skills__number">
+                                    {percentage}<span>%</span>
+                                </span>
+                            </div>
+                            <p className="skills__description">{description}</p>
+                            <div className="skills__bar">
+                                <span className="skills__percentage" style={{ width: `${percentage}%` }}><span></span></span>
+                            </div>
+                        </div>
+                    ))}
                 </div>
-            </div>
+
+                <div className='section__icons-wrapper' data-aos="fade-up">
+                    <div className='section__icons-container'>
+                        {skillArr.map((skill, index) => (
+                            <div className='section__icons' key={index}>
+                                <img src={`https://skillicons.dev/icons?i=${skill}`} alt={skill} />
+                                <p>{skill}</p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+                
+            {/* <div className='card__dot-grid1'></div> */}
+            <div className='card__dot-grid2'></div>
+            </section>
         </>
     )
 }
