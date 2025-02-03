@@ -1,0 +1,189 @@
+.discord-wrapper {
+  position: relative;
+}
+
+.discord-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: #5865f2;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 1001;
+}
+
+.discord-icon.offline {
+  background-color: #747f8d;
+}
+
+.discord-icon.hovered {
+    
+  transform: scale(0.95);
+  transform: scale(1.1) rotate(360deg);
+  }
+
+.discord-svg {
+  width: 28px;
+  height: 28px;
+  transition: transform 0.3s ease;
+}
+
+.status-indicator.idle {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #747f8d;
+  transition: background-color 0.3s ease;
+}
+
+.discord-icon.online .status-indicator {
+  background-color: #3ba55d;
+}
+
+.discord-icon.idle .status-indicator {
+  background-color: #faa81a;
+}
+
+.discord-icon.dnd .status-indicator {
+  background-color: #ed4245;
+}
+
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(59, 165, 93, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(59, 165, 93, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(59, 165, 93, 0);
+  }
+}
+
+.discord-icon.idle {
+  animation: pulse 3s infinite;
+}
+
+
+.discord-presence-card {
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  background: var(--black);
+  padding: 15px;
+  border-radius: 12px;
+  width: 300px;
+  font-size: 14px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  opacity: 0;
+  transform: translateY(20px) scale(0.95);
+  visibility: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: blur(10px);
+}
+
+.discord-presence-card.open {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  visibility: visible;
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.status-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.status-dot.idle {
+    background-color: #3ba55d; 
+}
+
+.status-dot.offline {
+    background-color: #747f8d; 
+}
+
+.status-text {
+    text-transform: capitalize;
+}
+
+.activity {
+    margin-bottom: 10px;
+}
+
+.spotify-activity,
+.vscode-activity,
+.game-activity {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.game-details {
+    flex: 1;
+}
+
+.spotify-song,
+.vscode-file,
+.game-name {
+    /* font-weight: bold; */
+    margin: 0;
+}
+
+
+.vscode-time {
+    margin: 0;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #2DC771;
+}
+
+.activity-icon{
+    font-size: 30px;
+}
+
+.activity-icon.spotify-icon {
+    color: #1DB954;
+}
+.activity-icon.vscode-icon {
+    color: #007ACC;
+}
+
+.offline-message {
+    text-align: center;
+    color: #b9bbbe;
+    font-style: italic;
+}
+
+
+@media screen and (max-width: 768px) {
+  @media (max-width: 768px) {
+    .discord-icon {
+      display: none;
+    }
+    .discord-presence-card {
+      display: none;
+    }
+  }
+  
+}
