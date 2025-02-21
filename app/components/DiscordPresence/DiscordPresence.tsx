@@ -66,11 +66,17 @@ const DiscordPresence = () => {
                 onMouseLeave={() => { setIsHovered(false); toggleCard(); }}
             >
                 <div className={`status-indicator ${status}`}></div>
-                <FaDiscord className="discord-svg" />
+                {status == 'idle' ? (
+                    <a href="https://discord.gg/urMnUrtbFg" target="_blank" rel="noopener noreferrer" className="discord-link">
+                        <FaDiscord className="discord-svg" />
+                    </a>
+                ) :
+                    <FaDiscord className="discord-svg" />
+                }
             </div>
 
             <div className={`discord-presence-card ${isCardOpen ? "open" : ""}`}>
-                    <BorderBeam size={150} duration={5} />
+                <BorderBeam size={150} duration={5} />
 
                 <div className="card-header">
                     <span className={`status-dot ${status}`}></span>
@@ -140,7 +146,7 @@ const LiveTimer = ({ startTime }: { startTime: number | undefined }) => {
         return `${minutes}:${remainingSeconds}`;
     };
 
-    return <p className="vscode-time"><IoGameControllerSharp/> <b>{formatTime(time)}</b></p>;
+    return <p className="vscode-time"><IoGameControllerSharp /> <b>{formatTime(time)}</b></p>;
 };
 
 export default DiscordPresence;
