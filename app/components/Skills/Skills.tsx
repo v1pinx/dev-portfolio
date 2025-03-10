@@ -4,7 +4,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from 'react';
 import { skillArr, skills } from '@/app/data/skillData'; 
-
+import Background from '../Background/Background';
 const Skills = () => {
     useEffect(()=>{
         AOS.init({duration:500});
@@ -12,6 +12,7 @@ const Skills = () => {
     return (
         <>
             <section className='section skills' id='skills'>
+                <Background />
                 <h2 className="section__title text-cs" data-aos="fade-up">Professional Skills</h2>
                 <p className="section__subtitle" data-aos="fade-up">
                     MY <span>Tools</span>

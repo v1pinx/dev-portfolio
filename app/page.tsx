@@ -1,25 +1,42 @@
 'use client'
+import { useState, useEffect } from "react";
 import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
 import Introduction from "./components/Introduction/Introduction";
 import Navbar from "./components/Navbar/Navbar";
 import Project from "./components/Project/Project";
-import Resume from "./components/Resume/Resume";
 import Skills from "./components/Skills/Skills";
 import SocialIcons from "./components/SocialIcons/SocialIcons";
-import { Analytics } from "@vercel/analytics/react"
-// import ProgressBar from "react-scroll-progress-bar";
+import { Analytics } from "@vercel/analytics/react";
+import Loader from "./components/Loader/Loader";
 export default function Home() {
+  const [activeComponent, setActiveComponent] = useState('introduction');
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 3000);
+    return () => clearTimeout(timer);
+  }, []);
+
+  function handleMenuClick(component: string) {
+    setActiveComponent(component);
+  }
 
   return (
     <>
-      {/* <ProgressBar height="3" bgcolor="#ffa400" duration="1" /> */}
-      {/* <Navbar /> */}
-      <Introduction />
-      <Skills />
-      <Project />
-      {/* <Resume /> */}
-      <Contact />
+      {isLoading ? (
+        <Loader />
+      ) : (
+        <>
+          <Navbar onMenuClick={handleMenuClick} activeComponent={activeComponent} />
+          {activeComponent === 'introduction' && <Introduction />}
+          {activeComponent === 'project' && <Project />}
+          {activeComponent === 'skills' && <Skills />}
+          {activeComponent === 'contact' && <Contact />}
+        </>
+      )}
     </>
   );
 }

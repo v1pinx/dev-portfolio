@@ -3,7 +3,7 @@ import axios from 'axios';
 import './Contact.css';
 import { FaRegAddressBook, FaRegEnvelope, FaRegUser, FaRegMap } from 'react-icons/fa';
 import toast, { Toaster } from 'react-hot-toast';
-
+import Background from '../Background/Background';
 export default function Contact() {
     const [form, setForm] = useState({
         name: '',
@@ -51,6 +51,7 @@ export default function Contact() {
 
     return (
         <section className='section contact' id='contact'>
+            <Background />
             <h2 className="section__title text-cs" data-aos="fade-up">Contact Me</h2>
             <p className="section__subtitle" data-aos="fade-up">
                 Let's <span>Talk</span>
