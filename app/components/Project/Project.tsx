@@ -1,6 +1,6 @@
 "use client"
 import './Project.css';
-import { FaGithub } from 'react-icons/fa';
+import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 import { useEffect, useState } from 'react';
 import { AnimatePresence } from 'framer-motion';
 import AOS from 'aos';
@@ -16,63 +16,74 @@ interface ProjectCardProps {
   category: string;
   description: string;
   link: string;
+  liveLink?: string;
+  technologies: string[];
   index: number;
 }
 
-const ProjectCard = ({ image, name, category, description, link, index }: ProjectCardProps) => {
+const ProjectCard = ({ 
+  image, 
+  name, 
+  category, 
+  description, 
+  link, 
+  liveLink, 
+  technologies,
+  index 
+}: ProjectCardProps) => {
   return (
     <motion.div
       layout
-      animate={{ opacity: 1, x: 0 }}
-      initial={{ opacity: 0, x: -100 }}
-      exit={{ opacity: 0, x: -100 }}
+      animate={{ opacity: 1, y: 0 }}
+      initial={{ opacity: 0, y: 50 }}
+      exit={{ opacity: 0, y: 50 }}
       transition={{ 
         duration: 0.3, 
         ease: "easeOut",
-        delay: index * 0.1 // Staggered animation for multiple cards
+        delay: index * 0.1
       }}
       className='card'
     >
       <div className='card__img-wrapper'>
         <img src={image} alt={name} className='card__img' />
+        <div className="card__overlay">
+          <div className="card__links">
+            <a href={link} target="_blank" rel="noopener noreferrer" className="card__icon-link">
+              <FaGithub />
+            </a>
+            {liveLink && (
+              <a href={liveLink} target="_blank" rel="noopener noreferrer" className="card__icon-link">
+                <FaExternalLinkAlt />
+              </a>
+            )}
+          </div>
+        </div>
       </div>
-      <span className="card__category">{category}</span>
-      <div className='card__info'>
+      
+      <div className='card__content'>
         <h1 className='card__name'>{name}</h1>
-        <a href={link} target="_blank" rel="noopener noreferrer" className="card__link">
-          <FaGithub />
-        </a>
+        <p className='card__description'>{description}</p>
+        
+        <div className='card__tech-stack'>
+          {technologies.map((tech, idx) => (
+            <span key={idx} className="tech-badge">{tech}</span>
+          ))}
+        </div>
       </div>
-      <p className='card__description'>{description}</p>
-      <div className='card__dot-grid'></div>
     </motion.div>
   );
 };
 
 const Project = () => {
-  const [selectedCategory, setSelectedCategory] = useState('All');
   const [currentPage, setCurrentPage] = useState(0);
   const [slideDirection, setSlideDirection] = useState('right');
   const projectsPerPage = 3;
-  
-  const categories = ['All', ...Array.from(new Set(
-    projectData.flatMap(project => project.category.split(', ').map(cat => cat.trim()))
-  ))];
-  
-  const filteredProjects = selectedCategory === 'All'
-    ? projectData
-    : projectData.filter(project =>
-        project.category.split(', ').map(cat => cat.trim()).includes(selectedCategory)
-      );
 
-  // Calculate total pages
-  const totalPages = Math.ceil(filteredProjects.length / projectsPerPage);
+  const totalPages = Math.ceil(projectData.length / projectsPerPage);
   
   useEffect(() => {
-    AOS.init({ duration: 500 });
-    // Reset current page when category changes
-    setCurrentPage(0);
-  }, [selectedCategory]);
+    AOS.init({ duration: 800 });
+  }, []);
 
   const nextPage = () => {
     setSlideDirection('right');
@@ -94,7 +105,7 @@ const Project = () => {
   };
 
   // Get current page projects
-  const currentProjects = filteredProjects.slice(
+  const currentProjects = projectData.slice(
     currentPage * projectsPerPage, 
     (currentPage + 1) * projectsPerPage
   );
@@ -131,7 +142,7 @@ const Project = () => {
       <div className='project__carousel-container container' data-aos="fade-up">
         <div className="project__carousel">
           <AnimatePresence custom={slideDirection} mode="wait">
-            {filteredProjects.length > 0 ? (
+            {projectData.length > 0 ? (
               <motion.div
                 key={currentPage}
                 className="project__carousel-page"
@@ -150,17 +161,19 @@ const Project = () => {
                     category={project.category}
                     description={project.description}
                     link={project.link}
+                    liveLink={project.liveLink || ""}
+                    technologies={project.technologies || []}
                     index={index}
                   />
                 ))}
               </motion.div>
             ) : (
-              <div className="no-projects">No projects found in this category.</div>
+              <div className="no-projects">No projects found.</div>
             )}
           </AnimatePresence>
         </div>
         
-        {filteredProjects.length > projectsPerPage && (
+        {projectData.length > projectsPerPage && (
           <div className="carousel-controls">
             <button className="carousel-btn prev-btn" onClick={prevPage}>
               <FaArrowLeft />

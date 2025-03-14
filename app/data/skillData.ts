@@ -1,12 +1,17 @@
 const skills = [
   {
+    name: "C++",
+    percentage: 85,
+    description: "Proficient in solving complex problems using C++.",
+  },
+  {
     name: "JavaScript",
-    percentage: 90,
+    percentage: 80,
     description: "Proficient in building interactive web applications.",
   },
   {
     name: "React",
-    percentage: 85,
+    percentage: 75,
     description:
       "Experienced in building reusable components and managing state.",
   },
@@ -16,19 +21,14 @@ const skills = [
     description: "Skilled in building scalable backend services.",
   },
   {
-    name: "CSS",
-    percentage: 75,
-    description: "Adept at creating responsive and visually appealing designs.",
+    name: "Linux",
+    percentage: 80,
+    description: "Familiar with Linux distributions and working in terminal.",
   },
   {
-    name: "Python",
+    name: "DevOps",
     percentage: 70,
-    description: "Familiar with data analysis and scripting.",
-  },
-  {
-    name: "TypeScript",
-    percentage: 65,
-    description: "Experienced in building type-safe applications.",
+    description: "Learning to automate software development processes.",
   },
 ];
 
@@ -62,4 +62,4 @@ const skillArr = [
   "arch",
 ];
 
-export { skills, skillArr }; 
+export { skills, skillArr };
