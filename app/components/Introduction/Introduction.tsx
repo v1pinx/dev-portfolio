@@ -1,7 +1,7 @@
 "use client";
 import { useEffect } from "react";
 import Image from "next/image";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaYoutube } from "react-icons/fa";
 import { SiLeetcode } from "react-icons/si";
 import Typewriter from "typewriter-effect";
 import DiscordPresence from "./../DiscordPresence/DiscordPresence";
@@ -9,7 +9,7 @@ import Background from "../Background/Background";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import './Introduction.css';
-import ProfilePhoto from '../../public/photo.png';
+import ProfilePhoto from '../../public/photo.jpg';
 
 const Introduction = () => {
     useEffect(() => {
@@ -71,11 +71,14 @@ const Introduction = () => {
                             <a href="https://www.github.com/v1pinx/" target="_blank" rel="noopener noreferrer">
                                 <FaGithub color="#eaf6ff" />
                             </a>
+                            <a href="https://www.youtube.com/@ByteGeeks-01/" target="_blank" rel="noopener noreferrer">
+                                <FaYoutube color="#eaf6ff" />
+                            </a>
                         </div>
 
                         <div className="intro__btns">
                             <a
-                                href="https://drive.google.com/file/d/1eI5tUws50XB8YC3KLqD39u4uJQOd4Ss3/view?usp=sharing"
+                                href="https://drive.google.com/file/d/1eta72ty2u11NU-7WWzX72A9CtynGne46/view?usp=sharing"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="btn text-cs"

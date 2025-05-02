@@ -45,6 +45,20 @@ export default function Navbar({ onMenuClick }: any) {
         </a>
         <a
           href="#"
+          className={activeLink === 'achievements' ? 'active' : ''}
+          onClick={() => handleMenuClick('achievements')}
+        > 
+          Achievements
+        </a>
+        <a
+          href="#"
+          className={activeLink === 'videoCV' ? 'active' : ''}
+          onClick={() => handleMenuClick('videoCV')}
+        > 
+          Video CV
+        </a>
+        <a
+          href="#"
           className={activeLink === 'contact' ? 'active' : ''}
           onClick={() => handleMenuClick('contact')}
         >

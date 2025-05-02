@@ -9,6 +9,8 @@ import Skills from "./components/Skills/Skills";
 import SocialIcons from "./components/SocialIcons/SocialIcons";
 import { Analytics } from "@vercel/analytics/react";
 import Loader from "./components/Loader/Loader";
+import Achievements from "./components/Achievements/Achievements";
+import VideoCv from "./components/VideoCV/VideoCV";
 export default function Home() {
   const [activeComponent, setActiveComponent] = useState('introduction');
   const [isLoading, setIsLoading] = useState(true);
@@ -35,6 +37,8 @@ export default function Home() {
           {activeComponent === 'project' && <Project />}
           {activeComponent === 'skills' && <Skills />}
           {activeComponent === 'contact' && <Contact />}
+          {activeComponent === 'achievements' && <Achievements />}
+          {activeComponent === 'videoCV' && <VideoCv />}
         </>
       )}
     </>
