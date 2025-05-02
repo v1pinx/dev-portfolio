@@ -14,9 +14,9 @@ export default function VideoCv() {
     
     const handlePlayVideo = () => {
         setShowThumbnail(false);
-        if (iframeRef.current) {
-            iframeRef.current.focus();
-        }
+        // if (iframeRef.current) {
+        //     iframeRef.current.focus();
+        // }
     };
     
     const onIframeLoad = () => {
