@@ -50,13 +50,13 @@ export default function Navbar({ onMenuClick }: any) {
         > 
           Achievements
         </a>
-        <a
+        {/* <a
           href="#"
           className={activeLink === 'videoCV' ? 'active' : ''}
           onClick={() => handleMenuClick('videoCV')}
         > 
           Video CV
-        </a>
+        </a> */}
         <a
           href="#"
           className={activeLink === 'contact' ? 'active' : ''}

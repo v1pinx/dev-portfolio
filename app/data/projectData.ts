@@ -13,9 +13,35 @@ const projectData = [
     name: "eCommerce Platform",
     description: "A full-stack eCommerce platform built with React, PHP, and MySQL, featuring user authentication and product management.",
     link: "https://github.com/v1pinx/PHP-project",
-    liveLink: "https://ecom-php-azure.vercel.app/login",
+    liveLink: "https://ecom-php-azure.vercel.app",
     category: "React.js, PHP, MySQL",
     technologies: ["React.js", "PHP", "MySQL", "JWT"]
+  },
+  {
+    image: "https://i.ibb.co/S4QmGXCg/Screenshot-2025-06-25-221820.png",
+    name: "crm.io",
+    description: "A CRM platform built with Next.js, MongoDB for customer segmentation, personalized campaigns, and actionable insights.",
+    link: "https://github.com/v1pinx/crm.io",
+    liveLink: "https://crm-io-omega.vercel.app",
+    category: "Next.js, MongoDB, NextAuth.js",
+    technologies: ["Next.js", "MongoDB", "NextAuth.js", "Tailwind CSS"]
+  },
+  {
+    image: "https://i.ibb.co/d4CdBSpW/7045adc6-2959-4c8c-878b-01e9064f6a89.png",
+    name: "Admission Portal API",
+    description: "A RESTful API for an admission portal built with Node.js, Express.js, and PostgreSQL, featuring user authentication and admission management.",
+    link: "https://github.com/v1pinx/ctrl-ap-server",
+    category: "Node.js, Express.js, PostgreSQL",
+    technologies: ["Node.js", "Express.js", "PostgreSQL", "JWT"]
+  },
+  {
+    image: "https://i.ibb.co/JVcXyGV/Screenshot-2025-06-25-222133.png",
+    name: "HR Performance Dashboard",
+    description: "A performance dashboard frontend for HR management built with Next.js.",
+    link: "https://github.com/v1pinx/hr-dashboard",
+    liveLink: "https://hr-dashboard-jet.vercel.app/",
+    category: "Next.js",
+    technologies: ["Next.js", "Tailwind CSS"]
   },
   {
     image: "https://i.ibb.co/qMBrbxFs/Pasted-image-3.png",
@@ -70,15 +96,6 @@ const projectData = [
     liveLink: null,
     category: "Node.js",
     technologies: ["Node.js", "gRPC", "Protocol Buffers"]
-  },
-  {
-    image: "https://www.shutterstock.com/image-vector/concept-computer-programming-developing-software-600nw-2149658841.jpg",
-    name: "Store API",
-    description: "A RESTful API for eCommerce, built with Node.js, Express.js, and MongoDB.",
-    link: "https://github.com/v1pinx/store-api",
-    liveLink: null,
-    category: "Node.js",
-    technologies: ["Node.js", "Express.js", "MongoDB"]
   },
   {
     image: "https://www.w2ssolutions.com/blog/wp-content/uploads/2021/04/technology-solutions.png",
