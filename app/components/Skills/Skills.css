@@ -1,104 +1,18 @@
-
-.skills__badges-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 badges in a row */
-    gap: 2rem;
-    width: 100%;
-    max-width: 1200px;
-}
-
-.skills__item {
-    background-color: var(--gray);
-    padding: 1.5rem;
-    border-radius: 8px;
-    transition: all 0.3s ease-in-out;
-}
-
-.skills__item:hover {
-    scale: 1.1;
-}
-
-@keyframes breathey {
-	0% {
-		transform: scaleX(1);
-        transform-origin: left;
-	}
-	25% {
-		transform: scaleX(0.95);
-        transform-origin: left;
-	}
-	75% {
-		transform: scaleX(1.05);
-        transform-origin: left;
-	}
-    100% {
-		transform: scaleX(1);
-        transform-origin: left;
-	}
-}
-
-skills__item:hover .skills__percentage{
-    animation: breathey 2s ease-in-out infinite;
-}
-
-.skills__title {
+#skills{
+    min-height: 100vh;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    margin-bottom: 0.5rem;
-}
-
-.skills__name {
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: var(--white);
-}
-
-.skills__number {
-    font-size: 1rem;
-    font-weight: 600;
-    color: var(--orange);
-}
-
-.skills__description {
-    font-size: 0.9rem;
-    color: var(--white);
-    margin-bottom: 1rem;
-}
-
-.skills__bar {
-    width: 100%;
-    height: 8px;
-    background-color: var(--dark-gray);
-    border-radius: 4px;
-    overflow: hidden;
-}
-
-.skills__percentage {
-    display: block;
-    height: 100%;
-    background-color: var(--orange);
-    border-radius: 4px;
-    position: relative;
-}
-
-.skills__percentage span {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background-color: var(--orange);
-    border-radius: 4px;
+    flex-direction: column;
+    text-align: center;
 }
 
 .section__icons-wrapper {
-    max-width: 1300px;
-    margin: 15px auto;
+    max-width: 880px;
 }
 
 .section__icons-container {
-    margin-top: 5vh;
+    margin-top: 2vh;
     display: flex;
     gap: 2rem;
     justify-content: center;
@@ -136,12 +50,6 @@ skills__item:hover .skills__percentage{
     text-align: center;
 }
 
-@media (max-width: 1024px) {
-    .skills__badges-container {
-        grid-template-columns: repeat(2, 1fr); 
-    }
-}
-
 @media (max-width: 768px) {
     .skills__badges-container {
         grid-template-columns: repeat(1, 1fr); 
@@ -149,22 +57,6 @@ skills__item:hover .skills__percentage{
 
     .text-cs {
         font-size: 2.5rem; 
-    }
-
-    .section__subtitle span {
-        font-size: 1.5rem; 
-    }
-
-    .skills__item {
-        padding: 1rem; 
-    }
-
-    .skills__name {
-        font-size: 1rem; 
-    }
-
-    .skills__description {
-        font-size: 0.8rem; 
     }
 
     .section__icons img {
@@ -177,22 +69,6 @@ skills__item:hover .skills__percentage{
 }
 
 @media (max-width: 480px) {
-    .skills__badges-container {
-        gap: 1rem;
-    }
-
-    .skills__item {
-        padding: 0.8rem;
-    }
-
-    .skills__name {
-        font-size: 0.9rem; 
-    }
-
-    .skills__description {
-        font-size: 0.75rem; 
-    }
-
     .section__icons img {
         width: 2rem; 
     }
@@ -202,33 +78,28 @@ skills__item:hover .skills__percentage{
     }
 }
 
-
-
-.card__dot-grid1 {
-    position: absolute;
-    left: 20px;
-    top: 20px;
-    width: 60px;
-    height: 60px;
-    background-image: radial-gradient(circle, var(--orange) 10%, transparent 10%);
-    background-size: 10px 10px;
-    opacity: 0.5;
-    animation: fadeIn 1s ease-in-out infinite alternate;
+.github-activity{
+    margin-top: 50px;
 }
 
-.card__dot-grid2 {
-    position: absolute;
-    left: 20px;
-    bottom: 20px;
-    width: 60px;
-    height: 60px;
-    background-image: radial-gradient(circle, var(--orange) 10%, transparent 10%);
-    background-size: 10px 10px;
-    opacity: 0.5;
-    animation: fadeIn 1s ease-in-out infinite alternate;
+.github-calendar-container {
+    background-color: var(--gray);
+    border-radius: 8px;
+    padding: 2rem;
+    overflow: hidden;
 }
 
-@keyframes fadeIn {
-    from { opacity: 0.5; }
-    to { opacity: 1; }
+.github-calendar-container .react-activity-calendar {
+    width: 100%;
+}
+
+.github-calendar-container .react-activity-calendar__legend {
+    justify-content: center;
+}
+
+/* Make GitHub calendar responsive */
+@media (max-width: 768px) {
+    .github-calendar-container {
+        padding: 1.5rem 1rem;
+    }
 }

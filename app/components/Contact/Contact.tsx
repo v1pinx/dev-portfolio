@@ -51,7 +51,7 @@ export default function Contact() {
 
     return (
         <section className='section contact' id='contact'>
-            <Background />
+            {/* <Background /> */}
             <h2 className="section__title text-cs" data-aos="fade-up">Contact Me</h2>
             <p className="section__subtitle" data-aos="fade-up">
                 Let's <span>Talk</span>

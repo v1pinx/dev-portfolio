@@ -20,7 +20,7 @@
   position: absolute;
   left: 0;
   top: -24px;
-  animation: animloader 2s ease infinite;
+  animation: animloader 1s ease infinite;
 }
 .loader::after {
   content: "";

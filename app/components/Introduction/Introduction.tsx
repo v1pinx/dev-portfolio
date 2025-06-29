@@ -5,11 +5,11 @@ import { FaGithub, FaLinkedin, FaYoutube } from "react-icons/fa";
 import { SiLeetcode } from "react-icons/si";
 import Typewriter from "typewriter-effect";
 import DiscordPresence from "./../DiscordPresence/DiscordPresence";
-import Background from "../Background/Background";
+// import Background from "../Background/Background";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import './Introduction.css';
-import ProfilePhoto from '../../public/photo.jpg';
+import ProfilePhoto from '../../public/photo2.png';
 
 const Introduction = () => {
     useEffect(() => {
@@ -27,8 +27,8 @@ const Introduction = () => {
 
     return (
         <>
-            <Background />
-            <div className="intro__wrapper" data-aos="flip-right">
+            {/* <Background /> */}
+            <div className="intro__wrapper" data-aos="flip-up">
                 <div className="intro__container">
                     <div className="intro__content">
                         <div className="intro__subtitle">

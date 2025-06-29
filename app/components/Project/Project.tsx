@@ -134,7 +134,7 @@ const Project = () => {
 
   return (
     <section className='section project' id='project'>
-      <Background />
+      {/* <Background /> */}
       <h2 className='section__title text-cs' data-aos="fade-up">Portfolio</h2>
       <p className="section__subtitle" data-aos="fade-up">
         MY <span>Venture</span>
