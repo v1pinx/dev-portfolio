@@ -78,7 +78,7 @@ const Introduction = () => {
 
                         <div className="intro__btns">
                             <a
-                                href="https://drive.google.com/file/d/1eta72ty2u11NU-7WWzX72A9CtynGne46/view?usp=sharing"
+                                href="https://drive.google.com/file/d/1MIdeqcdXL_7ttsAD8K8y8vXSJ6VrDV9w/view?usp=drive_link"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="btn text-cs"
