@@ -5,6 +5,7 @@ import Introduction from "./components/Introduction/Introduction";
 import Navbar from "./components/Navbar/Navbar";
 import Project from "./components/Project/Project";
 import Skills from "./components/Skills/Skills";
+import Experience from "./components/Experience/Experience";
 import Loader from "./components/Loader/Loader";
 import Background from "./components/Background/Background";
 export default function Home() {
@@ -37,6 +38,7 @@ export default function Home() {
           <Background />
           <Navbar/>
           <Introduction />
+          <Experience />
           <Skills />
           <Project />
           <Contact />
